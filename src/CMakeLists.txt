@@ -48,7 +48,7 @@ foreach(build ${BUILD_TYPES})
   mark_as_advanced(CLIUTILS_LIBRARY_${build})
 endforeach()
 
-set(CLIUTILS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src
+set(CLIUTILS_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}
   CACHE PATH 
   "cliutils include directory")
 set(CLIUTILS_FOUND TRUE CACHE BOOL "FIND CLIUTILS LIBRARY")
