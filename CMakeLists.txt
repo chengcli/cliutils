@@ -23,7 +23,18 @@ set(EXECUTABLE_RELDIR "bin")
 set(INCLUDE_RELDIR "include")
 set(SOURCE_RELDIR "source")
 
-## 4. set up project external libraries ##
+## 4. set up project system libraries ##
+message(STATUS "")
+message(STATUS "Set up project system libraries ...")
+
+if (${UseMPI})
+  find_package(MPI REQUIRED)
+  set(EnableMPI MPI_PARALLEL)
+else()
+  set(EnableMPI NOT_MPI_PARALLEL)
+endif()
+
+## 5. set up project external libraries ##
 message(STATUS "")
 message(STATUS "Set up project external libraries ...")
 
@@ -37,7 +48,7 @@ if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
   add_subdirectory(athenapp)
 endif()
 
-## 5. set up project library ##
+## 6. set up project library ##
 message(STATUS "")
 message(STATUS "Set up project complication and installation ...")
 

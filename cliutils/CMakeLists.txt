@@ -34,12 +34,14 @@ foreach(build ${BUILD_TYPES})
     SYSTEM PRIVATE
     ${DEBUGGER_INCLUDE_DIR}
     ${ATHENAPP_INCLUDE_DIR}
+    ${MPI_CXX_INCLUDE_PATH}
     ${CMAKE_BINARY_DIR}
-  )
+    )
 
   target_link_libraries(cliutils_${buildl}
     ${DEBUGGER_LIBRARY_${build}}
     ${ATHENAPP_LIBRARY_${build}}
+    ${MPI_CXX_LIBRARIES}
     )
 
   set(CLIUTILS_LIBRARY_${build} cliutils_${buildl}
