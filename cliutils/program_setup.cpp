@@ -139,8 +139,4 @@ void program_end(Mesh *pmesh)
     SignalHandler::CancelWallTimeAlarm();
 
   pdebug->Leave();
-
-#ifdef MPI_PARALLEL
-  MPI_Finalize();
-#endif
 }
