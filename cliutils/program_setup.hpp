@@ -7,6 +7,7 @@
 // forward declaration
 class Mesh;
 class ParameterInput;
+struct CommandLine;
 
 namespace Globals {
   extern int            mpi_tag_ub;
