@@ -68,7 +68,7 @@ void program_start(int argc, char **argv) {
   if (Globals::my_rank == 0) {
     std::cout << std::endl;
     std::cout << "######################################################" << std::endl;
-    std::cout << "##                 CANOE MODEL                      ##" << std::endl;
+    std::cout << "##                 EXDACS MODEL                     ##" << std::endl;
     std::cout << "######################################################" << std::endl;
   }
 
