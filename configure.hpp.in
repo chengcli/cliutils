@@ -2,6 +2,6 @@
 #define CONFIGURE_HPP
 
 // MPI parallel flag
-#define @EnableMPI@
+#define @MPIOption@
 
 #endif

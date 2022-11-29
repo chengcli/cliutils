@@ -31,9 +31,9 @@ message(STATUS "Set up project system libraries ...")
 
 if (${UseMPI})
   find_package(MPI REQUIRED)
-  set(EnableMPI MPI_PARALLEL)
+  set(MPIOption MPI_PARALLEL)
 else()
-  set(EnableMPI NOT_MPI_PARALLEL)
+  set(MPIOption NOT_MPI_PARALLEL)
 endif()
 
 ## 5. set up project external libraries ##
