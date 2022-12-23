@@ -33,13 +33,14 @@ message(STATUS "5. Set up project external libraries ...")
 # compile debugger
 if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
   add_subdirectory(debugger)
+  message(STATUS "== Done.")
 endif()
 
 # compile athenapp
 if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
   add_subdirectory(athenapp)
+  message(STATUS "== Done.")
 endif()
-message(STATUS "")
 
 ## 6. set up project library ##
 message(STATUS "6. Set up project complication and installation ...")
