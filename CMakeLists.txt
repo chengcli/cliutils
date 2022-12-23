@@ -29,6 +29,7 @@ message(STATUS "4. Set up project system libraries ...")
 
 ## 5. set up project external libraries ##
 message(STATUS "5. Set up project external libraries ...")
+set(HAS_EXTERNAL_LIBRARY FALSE)
 
 # compile debugger
 if (${CMAKE_CURRENT_SOURCE_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
