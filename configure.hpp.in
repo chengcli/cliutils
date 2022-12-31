@@ -1,7 +1,8 @@
 #ifndef CONFIGURE_HPP
 #define CONFIGURE_HPP
 
-// MPI parallel flag
-#define @MPIOption@
+enum {
+  NumVapors = @NumVapors@
+};
 
 #endif

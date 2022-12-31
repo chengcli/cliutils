@@ -16,7 +16,10 @@
 #   target_link_libraries( ${CLIUTILS_LIBRARY_DEBUG})
 #
 
-file(GLOB _src_files *.cpp)
+file(GLOB _src_files 
+  *.cpp
+  outputs/*.cpp
+  )
 
 foreach(build ${BUILD_TYPES})
   string(TOLOWER ${build} buildl)
