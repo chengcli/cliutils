@@ -37,6 +37,8 @@ foreach(build ${BUILD_TYPES})
     SYSTEM PRIVATE
     ${DEBUGGER_INCLUDE_DIR}
     ${ATHENAPP_INCLUDE_DIR}
+    ${NETCDF_INCLUDES}
+    ${PNETCDF_INCLUDE_DIR}
     ${MPI_CXX_INCLUDE_PATH}
     ${CMAKE_BINARY_DIR}
     )
@@ -44,6 +46,8 @@ foreach(build ${BUILD_TYPES})
   target_link_libraries(cliutils_${buildl}
     ${DEBUGGER_LIBRARY_${build}}
     ${ATHENAPP_LIBRARY_${build}}
+    ${NETCDF_LIBRARIES}
+    ${PNETCDF_LIBRARY}
     ${MPI_CXX_LIBRARIES}
     )
 
