@@ -43,6 +43,8 @@
 
 #define ERR {if(err!=NC_NOERR){printf("Error at %s:%d : %s\n", __FILE__,__LINE__, ncmpi_strerror(err));}}
 
+inline double rad2deg(double phi) { return phi*180./M_PI; }
+
 //----------------------------------------------------------------------------------------
 // PnetcdfOutput constructor
 // destructor - not needed for this derived class
