@@ -2,7 +2,7 @@
 #define CONFIGURE_HPP
 
 enum {
-  NumVapors = @NumVapors@
+  NumVapors = 0
 };
 
 // netcdf option

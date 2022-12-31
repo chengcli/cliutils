@@ -18,7 +18,6 @@
 //#include <hydro/hydro.hpp>
 #include <coordinates/coordinates.hpp>
 
-// canoe headers
 #include <configure.hpp>
 #include "user_outputs.hpp"
 //#include "../mesh/meshblock_impl.hpp"
@@ -29,7 +28,7 @@
 #endif
 
 // Only proceed if NETCDF output enabled
-#if NETCDFOUTPUT
+#ifdef NETCDF_OUTPUT
 
 // External library headers
 #include <netcdf.h>
@@ -458,4 +457,4 @@ void NetcdfOutput::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   return;
 }
 
-#endif // NETCDFOUTPUT
+#endif // NETCDF_OUTPUT

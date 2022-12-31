@@ -4,9 +4,6 @@ if ("${CMAKE_BUILD_TYPE}" STREQUAL "")
   set(CMAKE_BUILD_TYPE "DebugRelease")
 endif()
 
-set(NumVapors 0
-  CACHE STRING "Set number of vapors in the equation of state")
-
 # NetCDF output flag
 option(UseNetCDF "Enable NetCDF output" OFF)
 

@@ -35,7 +35,7 @@
 #endif
 
 // Only proceed if PNETCDF output enabled
-#if PNETCDFOUTPUT
+#ifdef PNETCDF_OUTPUT
 
 // External library headers
 #include <mpi.h>
@@ -592,4 +592,4 @@ void PnetcdfOutput::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   return;
 }
 
-#endif // PNETCDFOUTPUT
+#endif // PNETCDF_OUTPUT
