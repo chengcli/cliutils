@@ -49,7 +49,7 @@
 #include <configure.hpp>
 
 // Only proceed if NETCDF output enabled
-#if NETCDFOUTPUT
+#ifdef NETCDF_OUTPUT
 
 #include <netcdf.h>
 
@@ -973,7 +973,7 @@ int flush_decomp(struct fileinfo *ncoutfile, int nfiles, int r,
    return(0);
   }
 
-#endif // NETCDFOUTPUT
+#endif // NETCDF_OUTPUT
 
 /*
   U.S. Department of Commerce (DOC) Software License for "mppnccombine"
