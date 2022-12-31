@@ -102,7 +102,6 @@
   #include <radiation/radiation_band.hpp>
 #endif
 
-// canoe headers
 #include <configure.hpp>
 //#include "../mesh/meshblock_impl.hpp"
 #include "user_outputs.hpp"
@@ -265,7 +264,7 @@ Outputs::Outputs(Mesh *pm, ParameterInput *pin) {
           ATHENA_ERROR(msg);
 #endif
         } else if (op.file_type.compare("netcdf") == 0) {
-#if NETCDFOUTPUT
+#ifdef NETCDF_OUTPUT
           pnew_type = new NetcdfOutput(op);
 #else
           msg << "### FATAL ERROR in Outputs constructor" << std::endl
@@ -274,7 +273,7 @@ Outputs::Outputs(Mesh *pm, ParameterInput *pin) {
           ATHENA_ERROR(msg);
 #endif
         } else if (op.file_type.compare("pnetcdf") == 0) {
-#if PNETCDFOUTPUT
+#ifdef PNETCDF_OUTPUT
           pnew_type = new PnetcdfOutput(op);
 #else
           msg << "### FATAL ERROR in Outputs constructor" << std::endl
@@ -283,7 +282,7 @@ Outputs::Outputs(Mesh *pm, ParameterInput *pin) {
           ATHENA_ERROR(msg);
 #endif
         } else if (op.file_type.compare("fits") == 0) {
-#if FITSOUTPUT
+#ifdef FITS_OUTPUT
           pnew_type = new FITSOutput(op);
 #else
           msg << "### FATAL ERROR in Outputs constructor" << std::endl

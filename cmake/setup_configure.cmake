@@ -9,14 +9,32 @@ set(NumVapors 0
 
 # NetCDF output flag
 option(UseNetCDF "Enable NetCDF output" OFF)
-if (${UsePNetCDF})
+
+if (${UseNetCDF})
   find_package(NetCDF REQUIRED)
+  set(NetCDFOption NETCDF_OUTPUT)
+else()
+  set(NetCDFOption NOT_NETCDF_OUTPUT)
 endif()
 
 # PNetCDF output flag
 option(UsePNetCDF "Enable PNetCDF output" OFF)
+
 if (${UsePNetCDF})
   find_package(PNetCDF REQUIRED)
+  set(PNetCDFOption PNETCDF_OUTPUT)
+else()
+  set(PNetCDFOption NOT_PNETCDF_OUTPUT)
+endif()
+
+# FITS output flag
+option(UsePNetCDF "Enable FITS output" OFF)
+
+if (${UsePNetCDF})
+  find_package(FITS REQUIRED)
+  set(FITSOption FITS_OUTPUT)
+else()
+  set(FITSOption NOT_FITS_OUTPUT)
 endif()
 
 # MPI flag

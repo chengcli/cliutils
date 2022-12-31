@@ -5,4 +5,13 @@ enum {
   NumVapors = @NumVapors@
 };
 
+// netcdf option
+#define @NetCDFOption@
+
+// pnetcdf option
+#define @PNetCDFOption@
+
+// pnetcdf option
+#define @FITSOption@
+
 #endif
